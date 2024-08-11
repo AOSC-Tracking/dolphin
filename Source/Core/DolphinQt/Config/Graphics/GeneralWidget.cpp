@@ -240,7 +240,7 @@ void GeneralWidget::AddDescriptions()
       "recommended. Different games and different GPUs will behave differently on each "
       "backend, so for the best emulation experience it is recommended to try each and "
       "select the backend that is least problematic.<br><br><dolphin_emphasis>If unsure, "
-      "select OpenGL.</dolphin_emphasis>");
+      "select Vulkan.</dolphin_emphasis>");
   static const char TR_FULLSCREEN_DESCRIPTION[] =
       QT_TR_NOOP("Uses the entire screen for rendering.<br><br>If disabled, a "
                  "render window will be created instead.<br><br><dolphin_emphasis>If "

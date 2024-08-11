@@ -236,9 +236,6 @@ const std::vector<std::unique_ptr<VideoBackendBase>>& VideoBackendBase::GetAvail
     backends.push_back(std::make_unique<DX11::VideoBackend>());
     backends.push_back(std::make_unique<DX12::VideoBackend>());
 #endif
-#ifdef HAS_OPENGL
-    backends.push_back(std::make_unique<OGL::VideoBackend>());
-#endif
 #ifdef HAS_VULKAN
 #ifdef __APPLE__
     // Emplace the Vulkan backend at the beginning so it takes precedence over OpenGL.
@@ -252,6 +249,7 @@ const std::vector<std::unique_ptr<VideoBackendBase>>& VideoBackendBase::GetAvail
     backends.emplace(backends.begin(), std::make_unique<Metal::VideoBackend>());
 #endif
 #ifdef HAS_OPENGL
+    backends.push_back(std::make_unique<OGL::VideoBackend>());
     backends.push_back(std::make_unique<SW::VideoSoftware>());
 #endif
     backends.push_back(std::make_unique<Null::VideoBackend>());
