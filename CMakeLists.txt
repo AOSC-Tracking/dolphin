@@ -68,7 +68,6 @@ endif()
 
 find_package(KF6 ${KF6_MIN_VERSION} REQUIRED COMPONENTS
     KCMUtils
-    NewStuff
     CoreAddons
     I18n
     DBusAddons

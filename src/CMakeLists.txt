@@ -225,7 +225,6 @@ target_link_libraries(
     KF6::Completion
     KF6::TextWidgets
     KF6::ConfigCore
-    KF6::NewStuffWidgets    # KNSWidgets::Button
     KF6::Parts
     KF6::WindowSystem
     KF6::WidgetsAddons
@@ -608,11 +607,6 @@ if(NOT WIN32)
 
     install(TARGETS kcm_dolphinviewmodes DESTINATION ${KDE_INSTALL_PLUGINDIR}/dolphin/kcms )
     install(TARGETS kcm_dolphingeneral DESTINATION ${KDE_INSTALL_PLUGINDIR}/dolphin/kcms )
-endif()
-
-if(NOT WIN32)
-    add_subdirectory(settings/contextmenu/servicemenuinstaller)
-    install( FILES settings/contextmenu/servicemenu.knsrc DESTINATION ${KDE_INSTALL_KNSRCDIR} )
 endif()
 
 ########### install files ###############
