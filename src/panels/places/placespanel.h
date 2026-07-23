@@ -42,7 +42,7 @@ public:
 
     void requestTearDown();
     void proceedWithTearDown();
-
+    QSize sizeHint() const override;
 public Q_SLOTS:
     void readSettings();
 
